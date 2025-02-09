@@ -11,8 +11,7 @@ from rich.text import Text
 from rich.style import Style
 from carparktool import CarParkTool
 
-__CHANNEL_USERNAME__ = "XENONUKER_CHAT"
-__GROUP_USERNAME__   = "XENONUKER_CHAT"
+__USERNAME__ = "@Trese_xeno"
 
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
@@ -47,7 +46,7 @@ def banner(console):
     console.print(colorful_text, end=None)
     console.print("[bold blue]♕ NOTE![/bold blue]: IF YOU WANT TO BUY UNLIMITED ACCESS KEY MESSAGE ME TELEGRAM @TRESE_XENO.")
     console.print("[bold green]♕ CarParkingTool[/bold green]: SHARED ACCESS IS NOT ALLOWED IF YOU SHARE ACCESS YOU GOT BLOCK.")
-    console.print(f"[bold green]♕ Telegram[/bold green]: [bold blue]@{__CHANNEL_USERNAME__}[/bold blue] or [bold blue]@{__GROUP_USERNAME__}[/bold blue].")
+    console.print(f"[bold green]♕ Telegram[/bold green]: [bold blue]@{__USERNAME__}[/bold blue].")
     console.print("[bold red]==================================================[/bold red]")
     console.print("[bold yellow]! Note[/bold yellow]: BEFORE USE THIS JUST MAKE SURE THE ACCOUNT WAS ALREADY SIGNOUT IN GAME!.", end="\n\n")
 
@@ -197,7 +196,7 @@ if __name__ == "__main__":
                 console.print("[bold cyan][!] Insert how much coins do you want.[/bold cyan]")
                 amount = IntPrompt.ask("[bold][?] Amount[/bold]")
                 console.print("[bold cyan][%] Saving your data[/bold cyan]: ", end=None)
-                if amount > 0 and amount <= 200000:
+                if amount > 0 and amount <= 500000:
                     if cpm.set_player_coins(amount):
                         console.print("[bold green]SUCCESSFUL.[/bold green]")
                         console.print("==================================")
