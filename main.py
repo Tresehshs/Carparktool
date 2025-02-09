@@ -11,7 +11,7 @@ from rich.text import Text
 from rich.style import Style
 from carparktool import CarParkTool
 
-__USERNAME__ = "@Trese_xeno"
+__USERNAME__ = "trese_xeno"
 
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
