@@ -36,7 +36,7 @@ def gradient_text(text, colors):
 
 def banner(console):
     os.system('cls' if os.name == 'nt' else 'clear')
-    brand_name = figlet_format('XENONUKER', font='drpepper')
+    brand_name = figlet_format('STEVE X CPM', font='drpepper')
     colors = [
         "rgb(255,0,0)", "rgb(255,69,0)", "rgb(255,140,0)", "rgb(255,215,0)", "rgb(173,255,47)", 
         "rgb(0,255,0)", "rgb(0,255,255)", "rgb(0,191,255)", "rgb(0,0,255)", "rgb(139,0,255)",
@@ -44,43 +44,43 @@ def banner(console):
     ]
     colorful_text = gradient_text(brand_name, colors)
     console.print(colorful_text, end=None)
-    console.print("[bold blue]♕ NOTE![/bold blue]: IF YOU WANT TO BUY UNLIMITED ACCESS KEY MESSAGE ME TELEGRAM @TRESE_XENO.")
-    console.print("[bold green]♕ CarParkingTool[/bold green]: SHARED ACCESS IS NOT ALLOWED IF YOU SHARE ACCESS YOU GOT BLOCK.")
-    console.print(f"[bold green]♕ Telegram[/bold green]: [bold blue]@{__USERNAME__}[/bold blue].")
-    console.print("[bold red]==================================================[/bold red]")
-    console.print("[bold yellow]! Note[/bold yellow]: BEFORE USE THIS JUST MAKE SURE THE ACCOUNT WAS ALREADY SIGNOUT IN GAME!.", end="\n\n")
+    console.print("[colorful]♕ NOTE![/bold colorful]: IF YOU WANT TO BUY UNLIMITED ACCESS KEY MESSAGE ME TELEGRAM @TRESE_XENO.")
+    console.print("[colorful]♕ Carparktool[/bold colorful]: SHARED ACCESS IS NOT ALLOWED IF YOU SHARE ACCESS YOU GOT BLOCK.")
+    console.print(f"[colorful]♕ Telegram[/bold colorful]: [bold colorful]@{__USERNAME__}[/bold colorful].")
+    console.print("[colorful]==================================================[/bold colorful]")
+    console.print("[colorful]! Note[/bold colorful]: BEFORE USE THIS JUST MAKE SURE THE ACCOUNT WAS ALREADY SIGNOUT IN GAME!.", end="\n\n")
 
 def load_player_data(cpm):
     response = cpm.get_player_data()
     if response.get('ok'):
         data = response.get('data')
         if 'floats' in data and 'localID' in data and 'money' in data and 'coin' in data:
-            console.print("[bold][red]================[/red][ PLAYER DETAILS ][red]================[/red][/bold]")
-            console.print(f"[bold green]Name   [/bold green]: { (data.get('Name') if 'Name' in data else 'UNDEFINED') }.")
-            console.print(f"[bold green]LocalID[/bold green]: { (data.get('localID') if 'localID' in data else 'UNDEFINED') }.")
-            console.print(f"[bold green]Money  [/bold green]: { (data.get('money') if 'money' in data else 'UNDEFINED') }.")
-            console.print(f"[bold green]Coins  [/bold green]: { (data.get('coin') if 'coin' in data else 'UNDEFINED') }.")
+            console.print("[colorful][colorful]================[/bold colorful][ PLAYER DETAILS ][colorful]================[/bold colorful][/bold]")
+            console.print(f"[colorful]Name   [/bold colorful]: { (data.get('Name') if 'Name' in data else 'UNDEFINED') }.")
+            console.print(f"[colorful]LocalID[/bold colorful]: { (data.get('localID') if 'localID' in data else 'UNDEFINED') }.")
+            console.print(f"[colorful]Money  [/bold colorful]: { (data.get('money') if 'money' in data else 'UNDEFINED') }.")
+            console.print(f"[colorful]Coins  [/bold colorful]: { (data.get('coin') if 'coin' in data else 'UNDEFINED') }.")
         else:
-            console.print("[bold red]! ERROR[/bold red]: new accounts most be signed-in to the game at least once !.")
+            console.print("[bold colorful]! ERROR[/bold colorful]: new accounts most be signed-in to the game at least once !.")
             exit(1)
     else:
-        console.print("[bold red]! ERROR[/bold red]: seems like your login is not properly set !.")
+        console.print("[bold colorful]! ERROR[/bold colorful]: seems like your login is not properly set !.")
         exit(1)
     
 def load_key_data(cpm):
     data = cpm.get_key_data()
-    console.print("[bold][red]==================================================[/red][/bold]")
-    console.print(f"[bold green]Access Key [/bold green]: { data.get('access_key') }.")
-    console.print(f"[bold green]Telegram ID[/bold green]: { data.get('telegram_id') }.")
-    console.print(f"[bold green]Balance    [/bold green]: { (data.get('coins') if not data.get('is_unlimited') else 'Unlimited') }.")
+    console.print("[bold][colorful]==================================================[/colorful][/bold]")
+    console.print(f"[bold colorful]Access Key [/bold colorful]: { data.get('access_key') }.")
+    console.print(f"[bold colorful]Telegram ID[/bold colorful]: { data.get('telegram_id') }.")
+    console.print(f"[bold colorful]Balance    [/bold colorful]: { (data.get('coins') if not data.get('is_unlimited') else 'Unlimited') }.")
 
 def load_client_details():
     response = requests.get("http://ip-api.com/json")
     data = response.json()
-    console.print("[bold][red]==================================================[/red][/bold]")
-    console.print(f"[bold][green]Location[/bold][/green]: {data.get('city')}, {data.get('regionName')}, {data.get('countryCode')}")
-    console.print(f"[bold][green]ISP[/bold][/green]     : {data.get('isp')}")
-    console.print("[bold][red]===================[/red][ SERVICES ][red]===================[/red][/bold]")
+    console.print("[bold][red]==================================================[/colorful][/bold]")
+    console.print(f"[bold][colorful]Location[/bold][/colorful]: {data.get('city')}, {data.get('regionName')}, {data.get('countryCode')}")
+    console.print(f"[bold][colorful]ISP[/bold][/colorful]     : {data.get('isp')}")
+    console.print("[bold][colorful]===================[/colorful][ SERVICES ][colorful]===================[/colorful][/bold]")
 
 def prompt_valid_value(content, tag, password=False):
     while True:
@@ -115,29 +115,29 @@ if __name__ == "__main__":
         acc_email = prompt_valid_value("[bold][?] Account Email[/bold]", "Email", password=False)
         acc_password = prompt_valid_value("[bold][?] Account Password[/bold]", "Password", password=False)
         acc_access_key = prompt_valid_value("[bold][?] Access Key[/bold]", "Access Key", password=False)
-        console.print("[bold cyan][%] Trying to Login[/bold cyan]: ", end=None)
+        console.print("[bold colorful][%] Trying to Login[/bold colorful]: ", end=None)
         cpm = CarParkTool(acc_access_key)
         login_response = cpm.login(acc_email, acc_password)
         if login_response != 0:
             if login_response == 100:
-                console.print("[bold red]ACCOUNT NOT FOUND[/bold red].")
+                console.print("[bold colorful]ACCOUNT NOT FOUND[/bold colorful].")
                 sleep(2)
                 continue
             elif login_response == 101:
-                console.print("[bold red]WRONG PASSWORD[/bold red].")
+                console.print("[bold colorful]WRONG PASSWORD[/bold colorful].")
                 sleep(2)
                 continue
             elif login_response == 103:
-                console.print("[bold red]INVALID ACCESS KEY[/bold red].")
+                console.print("[bold colorful]INVALID ACCESS KEY[/bold colorful].")
                 sleep(2)
                 continue
             else:
-                console.print("[bold red]TRY AGAIN[/bold red].")
-                console.print("[bold yellow]! Note[/bold yellow]: make sure you filled out the fields !.")
+                console.print("[bold colorful]TRY AGAIN[/bold colorful].")
+                console.print("[bold colorful]! Note[/bold colorful]: make sure you filled out the fields !.")
                 sleep(2)
                 continue
         else:
-            console.print("[bold green]SUCCESSFUL[/bold green].")
+            console.print("[bold colorful]SUCCESSFUL[/bold colorful].")
             sleep(2)
         while True:
             banner(console)
@@ -145,51 +145,51 @@ if __name__ == "__main__":
             load_key_data(cpm)
             load_client_details()
             choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22"]
-            console.print("[bold][cyan](01):[/cyan] [green]Increase Money ~ 500[/green]")
-            console.print("[bold][cyan](02):[/cyan] [green]Increase Coins ~ 1500[/green]")
-            console.print("[bold][cyan](03):[/cyan] [green]King Rank ~ 400[/green]")
-            console.print("[bold][cyan](04):[/cyan] [green]Change ID ~ 600[/green]")
-            console.print("[bold][cyan](05):[/cyan] [green]Change Name ~ 100[/green]")
-            console.print("[bold][cyan](06):[/cyan] [green]Change Name (Rainbow) ~ 100[/green]")
-            console.print("[bold][cyan](07):[/cyan] [green]Number Plates ~ 500[/green]")
-            console.print("[bold][cyan](08):[/cyan] [green]Account Delete ~ FREE[/green]")
-            console.print("[bold][cyan](09):[/cyan] [green]Account Register ~ FREE[/green]")
-            console.print("[bold][cyan](10):[/cyan] [green]Delete Friends ~ 300[/green]")
-            console.print("[bold][cyan](11):[/cyan] [green]Unlock Paid Cars ~ 1700[/green]")
-            console.print("[bold][cyan](12):[/cyan] [green]Unlock all Cars ~ 1400[/green]")
-            console.print("[bold][cyan](13):[/cyan] [green]Unlock all Cars Siren ~ 2000[/green]")
-            console.print("[bold][cyan](14):[/cyan] [green]Unlock w16 Engine ~ 800[/green]")
-            console.print("[bold][cyan](15):[/cyan] [green]Unlock All Horns ~ 700[/green]")
-            console.print("[bold][cyan](16):[/cyan] [green]Unlock Disable Damage ~ 700[/green]")
-            console.print("[bold][cyan](17):[/cyan] [green]Unlock Unlimited Fuel ~ 1500[/green]")
-            console.print("[bold][cyan](18):[/cyan] [green]Unlock House 3 ~ 2500[/green]")
-            console.print("[bold][cyan](19):[/cyan] [green]Unlock Smoke ~ 2000[/green]")
-            console.print("[bold][cyan](20):[/cyan] [green]Change Race Wins ~ 800[/green]")
-            console.print("[bold][cyan](21):[/cyan] [green]Change Race Loses ~ 800[/green]")
-            console.print("[bold][cyan](22):[/cyan] [green]Clone Account ~ 4000[/green]")
-            console.print("[bold][cyan](0) :[/cyan] [red]Exit[/red]", end="\n\n")
-            service = IntPrompt.ask(f"[bold][?] Select a Service [red][1-{choices[-1]} or 0][/red][/bold]", choices=choices, show_choices=False)
+            console.print("[bold][colorful](01):[/colorful] [colorful]Increase Money ~ 500[/colorful]")
+            console.print("[bold][colorful](02):[/colorful] [colorful]Increase Coins ~ 1500[/colorful]")
+            console.print("[bold][colorful](03):[/colorful] [colorful]King Rank ~ 400[/colorful]")
+            console.print("[bold][colorful](04):[/colorful] [colorful]Change ID ~ 600[/colorful]")
+            console.print("[bold][colorful](05):[/colorful] [colorful]Change Name ~ 100[/colorful]")
+            console.print("[bold][colorful](06):[/colorful] [colorful]Change Name (Rainbow) ~ 100[/colorful]")
+            console.print("[bold][colorful](07):[/colorful] [colorful]Number Plates ~ 500[/colorful]")
+            console.print("[bold][colorful](08):[/colorful] [colorful]Account Delete ~ FREE[/colorful]")
+            console.print("[bold][colorful](09):[/colorful] [colorful]Account Register ~ FREE[/colorful]")
+            console.print("[bold][colorful](10):[/colorful] [colorful]Delete Friends ~ 300[/colorful]")
+            console.print("[bold][colorful](11):[/colorful] [colorful]Unlock Paid Cars ~ 1700[/colorful]")
+            console.print("[bold][colorful](12):[/colorful] [colorful]Unlock all Cars ~ 1400[/colorful]")
+            console.print("[bold][colorful](13):[/colorful] [colorful]Unlock all Cars Siren ~ 2000[/colorful]")
+            console.print("[bold][colorful](14):[/colorful] [colorful]Unlock w16 Engine ~ 800[/colorful]")
+            console.print("[bold][colorful](15):[/colorful] [colorful]Unlock All Horns ~ 700[/colorful]")
+            console.print("[bold][colorful](16):[/colorful] [colorful]Unlock Disable Damage ~ 700[/colorful]")
+            console.print("[bold][colorful](17):[/colorful] [colorful]Unlock Unlimited Fuel ~ 1500[/colorful]")
+            console.print("[bold][colorful](18):[/colorful] [colorful]Unlock House 3 ~ 2500[/colorful]")
+            console.print("[bold][colorful](19):[/colorful] [colorful]Unlock Smoke ~ 2000[/colorful]")
+            console.print("[bold][colorful](20):[/colorful] [colorful]Change Race Wins ~ 800[/colorful]")
+            console.print("[bold][colorful](21):[/colorful] [colorful]Change Race Loses ~ 800[/colorful]")
+            console.print("[bold][colorful](22):[/colorful] [colorful]Clone Account ~ 4000[/colorful]")
+            console.print("[bold][colorful](0) :[/colorful] [colorful]Exit[/colorful]", end="\n\n")
+            service = IntPrompt.ask(f"[colorful][?] Select a Service [colorful][1-{choices[-1]} or 0][/colorful][/bold]", choices=choices, show_choices=False)
             if service == 0: # Exit
-                console.print(f"[bold yellow][!] Thank You for using our tool, please join our telegram channel[/bold yellow]: [bold blue]@{__CHANNEL_USERNAME__}[/bold blue].")
+                console.print(f"[bold colorful][!] Thank You for using our tool, please join our telegram channel[/bold colorful]: [bold colorful]@{__CHANNEL_USERNAME__}[/bold colorful].")
             elif service == 1: # Increase Money
-                console.print("[bold cyan][!] Insert how much money do you want.[/bold cyan]")
+                console.print("[bold colorful][!] Insert how much money do you want.[/bold colorful]")
                 amount = IntPrompt.ask("[bold][?] Amount[/bold]")
-                console.print("[bold cyan][%] Saving your data[/bold cyan]: ", end=None)
+                console.print("[bold colorful][%] Saving your data[/bold colorful]: ", end=None)
                 if amount > 0 and amount <= 50000000:
                     if cpm.set_player_money(amount):
-                        console.print("[bold green]SUCCESSFUL.[/bold green]")
+                        console.print("[bold colorful]SUCCESSFUL.[/bold colorful]")
                         console.print("==================================")
-                        answ = Prompt.ask("[bold cyan][?] Do You want to Exit ?[/bold cyan]", choices=["y", "n"], default="n")
-                        if answ == "y": console.print(f"[bold yellow][!] Thank You for using our tool, please join our telegram channel[/bold yellow]: [bold blue]@{__CHANNEL_USERNAME__}[/bold blue].")
+                        answ = Prompt.ask("[bold colorful][?] Do You want to Exit ?[/bold colorful]", choices=["y", "n"], default="n")
+                        if answ == "y": console.print(f"[bold colorful][!] Thank You for using our tool, please join our telegram channel[/bold colorful]: [bold colorful]@{__CHANNEL_USERNAME__}[/bold colorful].")
                         else: continue
                     else:
-                        console.print("[bold red]FAILED.[/bold red]")
-                        console.print("[bold yellow][!] Please try again.[/bold yellow]")
+                        console.print("[bold colorful]FAILED.[/bold colorful]")
+                        console.print("[bold colorful][!] Please try again.[/bold colorful]")
                         sleep(2)
                         continue
                 else:
-                    console.print("[bold red]FAILED.[/bold red]")
-                    console.print("[bold yellow][!] Please use valid values.[/bold yellow]")
+                    console.print("[bold colorful]FAILED.[/bold colorful]")
+                    console.print("[bold colorful][!] Please use valid values.[/bold colorful]")
                     sleep(2)
                     continue
             elif service == 2: # Increase Coins
