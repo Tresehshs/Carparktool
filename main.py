@@ -44,7 +44,7 @@ def banner(console):
     ]
     colorful_text = gradient_text(brand_name, colors)
     console.print(colorful_text, end=None)
-    console.primt("[bold green] IF YOU WANT TO BUY UNLIMITED ACCESS KEY MESSAGE ME TELEGRAM @TRESE_XENO.
+    console.print("[bold green] IF YOU WANT TO BUY UNLIMITED ACCESS KEY MESSAGE ME TELEGRAM @TRESE_XENO.
     console.print("[bold green] CarParkingTool[/bold green]: SHARE ACCES IS NOT ALLOWED IF YOU SHARED ACCESS YOU GOT BLOCKED")
     console.print(f"[bold green] Telegram[/bold green]: [bold blue]@{__CHANNEL_USERNAME__}[/bold blue]
     console.print("[bold rgb]==================================================[/bold rgb]")
