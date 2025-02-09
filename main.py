@@ -11,8 +11,8 @@ from rich.text import Text
 from rich.style import Style
 from carparktool import CarParkTool
 
-__CHANNEL_USERNAME__ = "CP_BombilO"
-__GROUP_USERNAME__   = "CP_BombilO_chat"
+__CHANNEL_USERNAME__ = "XENONUKER_CHAT"
+__GROUP_USERNAME__   = "XENONUKER_CHAT"
 
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
@@ -37,7 +37,7 @@ def gradient_text(text, colors):
 
 def banner(console):
     os.system('cls' if os.name == 'nt' else 'clear')
-    brand_name = figlet_format('CarParkingTool', font='drpepper')
+    brand_name = figlet_format('XENONUKER', font='drpepper')
     colors = [
         "rgb(255,0,0)", "rgb(255,69,0)", "rgb(255,140,0)", "rgb(255,215,0)", "rgb(173,255,47)", 
         "rgb(0,255,0)", "rgb(0,255,255)", "rgb(0,191,255)", "rgb(0,0,255)", "rgb(139,0,255)",
@@ -45,10 +45,11 @@ def banner(console):
     ]
     colorful_text = gradient_text(brand_name, colors)
     console.print(colorful_text, end=None)
-    console.print("[bold green]♕ CarParkingTool[/bold green]: скрипт который поможет вам стать самым крутым.")
+    console.print("[bold blue]♕ NOTE![/bold blue]: IF YOU WANT TO BUY UNLIMITED ACCESS KEY MESSAGE ME TELEGRAM @TRESE_XENO.")
+    console.print("[bold green]♕ CarParkingTool[/bold green]: SHARED ACCESS IS NOT ALLOWED IF YOU SHARE ACCESS YOU GOT BLOCK.")
     console.print(f"[bold green]♕ Telegram[/bold green]: [bold blue]@{__CHANNEL_USERNAME__}[/bold blue] or [bold blue]@{__GROUP_USERNAME__}[/bold blue].")
     console.print("[bold red]==================================================[/bold red]")
-    console.print("[bold yellow]! Note[/bold yellow]: Вам нужно выйти с игры перед использованием !.", end="\n\n")
+    console.print("[bold yellow]! Note[/bold yellow]: BEFORE USE THIS JUST MAKE SURE THE ACCOUNT WAS ALREADY SIGNOUT IN GAME!.", end="\n\n")
 
 def load_player_data(cpm):
     response = cpm.get_player_data()
