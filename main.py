@@ -11,6 +11,10 @@ from rich.text import Text
 from rich.style import Style
 from carparktool import CarParkTool
 
+__CHANNEL_USERNAME__ = "trese_xeno"
+__GROUP_USERNAME__   = "trese_xeno"
+
+
 
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
@@ -45,6 +49,7 @@ def banner(console):
     console.print(colorful_text, end=None)
     console.print("[bold green]: IF YOU WANT UNLIMITED ACCESS BUY ON "trese_xeno" IN TELEGRAM.)
     console.print("[bold green] [/bold green]: SHARE ACCESS IS NOT ALLOWED IF YOU SHARE ACCES YOU GOT BLOCK.")
+    console.print(f"[bold green]♕ Telegram[/bold green]: [bold blue]@{__CHANNEL_USERNAME__}[/bold blue] or [bold blue]@{__GROUP_USERNAME__}[/bold blue].")
     console.print("[bold red]==================================================[/bold red]")
     console.print("[bold yellow]! Note[/bold yellow]: BEFORE USING THIS MAKE SURE THE ACCOUNT WAS ALREADY SIGNOUT IN GAME.", end="\n\n")
 
