@@ -11,7 +11,8 @@ from rich.text import Text
 from rich.style import Style
 from carparktool import CarParkTool
 
-__USERNAME__ = "trese_xeno"
+__CHANNEL_USERNAME__ = "CP_BombilO"
+__GROUP_USERNAME__   = "CP_BombilO_chat"
 
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
@@ -36,7 +37,7 @@ def gradient_text(text, colors):
 
 def banner(console):
     os.system('cls' if os.name == 'nt' else 'clear')
-    brand_name = figlet_format('STEVE X CPM', font='drpepper')
+    brand_name = figlet_format('CarParkingTool', font='drpepper')
     colors = [
         "rgb(255,0,0)", "rgb(255,69,0)", "rgb(255,140,0)", "rgb(255,215,0)", "rgb(173,255,47)", 
         "rgb(0,255,0)", "rgb(0,255,255)", "rgb(0,191,255)", "rgb(0,0,255)", "rgb(139,0,255)",
@@ -44,11 +45,10 @@ def banner(console):
     ]
     colorful_text = gradient_text(brand_name, colors)
     console.print(colorful_text, end=None)
-    console.print("[bold green] [/bold green]: IF YOU WANT TO BUY UNLIMITED ACCESS KEY MESSAGE ME TELEGRAM @TRESE_XENO")
-    console.print("[bold green] Carparktool[/bold green]: SHARE ACCES IS NOT ALLOWED IF YOU SHARED ACCESS YOU GOT BLOCKED")
-    console.print(f"[bold green] Telegram[/bold green]: [bold blue]@{__CHANNEL_USERNAME__}[/bold blue]
-    console.print("[bold rgb]==================================================[/bold rgb]")
-    console.print("[bold yellow]! Note[/bold yellow]: '[bold rgb] BEFORE YOU USE THE MAKE SURE THE ACCOUNT WAS ALREADY SIGNOUT IN CPM", end="\n\n")
+    console.print("[bold green]♕ CarParkingTool[/bold green]: скрипт который поможет вам стать самым крутым.")
+    console.print(f"[bold green]♕ Telegram[/bold green]: [bold blue]@{__CHANNEL_USERNAME__}[/bold blue] or [bold blue]@{__GROUP_USERNAME__}[/bold blue].")
+    console.print("[bold red]==================================================[/bold red]")
+    console.print("[bold yellow]! Note[/bold yellow]: Вам нужно выйти с игры перед использованием !.", end="\n\n")
 
 def load_player_data(cpm):
     response = cpm.get_player_data()
@@ -69,7 +69,7 @@ def load_player_data(cpm):
     
 def load_key_data(cpm):
     data = cpm.get_key_data()
-    console.print("[bold][rgb]==================================================[/rgb][/bold]")
+    console.print("[bold][red]==================================================[/red][/bold]")
     console.print(f"[bold green]Access Key [/bold green]: { data.get('access_key') }.")
     console.print(f"[bold green]Telegram ID[/bold green]: { data.get('telegram_id') }.")
     console.print(f"[bold green]Balance    [/bold green]: { (data.get('coins') if not data.get('is_unlimited') else 'Unlimited') }.")
@@ -77,10 +77,10 @@ def load_key_data(cpm):
 def load_client_details():
     response = requests.get("http://ip-api.com/json")
     data = response.json()
-    console.print("[bold][rgb]==================================================[/rgb][/bold]")
+    console.print("[bold][red]==================================================[/red][/bold]")
     console.print(f"[bold][green]Location[/bold][/green]: {data.get('city')}, {data.get('regionName')}, {data.get('countryCode')}")
     console.print(f"[bold][green]ISP[/bold][/green]     : {data.get('isp')}")
-    console.print("[bold][rgb]===================[/rgb][ SERVICES ][rgb]===================[/rgb][/bold]")
+    console.print("[bold][red]===================[/red][ SERVICES ][red]===================[/red][/bold]")
 
 def prompt_valid_value(content, tag, password=False):
     while True:
@@ -175,7 +175,7 @@ if __name__ == "__main__":
                 console.print("[bold cyan][!] Insert how much money do you want.[/bold cyan]")
                 amount = IntPrompt.ask("[bold][?] Amount[/bold]")
                 console.print("[bold cyan][%] Saving your data[/bold cyan]: ", end=None)
-                if amount > 0 and amount <= 5000000000:
+                if amount > 0 and amount <= 50000000:
                     if cpm.set_player_money(amount):
                         console.print("[bold green]SUCCESSFUL.[/bold green]")
                         console.print("==================================")
