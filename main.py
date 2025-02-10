@@ -11,8 +11,6 @@ from rich.text import Text
 from rich.style import Style
 from carparktool import CarParkTool
 
-__CHANNEL_USERNAME__ = "CP_BombilO"
-__GROUP_USERNAME__   = "CP_BombilO_chat"
 
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
@@ -37,7 +35,7 @@ def gradient_text(text, colors):
 
 def banner(console):
     os.system('cls' if os.name == 'nt' else 'clear')
-    brand_name = figlet_format('CarParkingTool', font='drpepper')
+    brand_name = figlet_format('STEVE X CPM', font='drpepper')
     colors = [
         "rgb(255,0,0)", "rgb(255,69,0)", "rgb(255,140,0)", "rgb(255,215,0)", "rgb(173,255,47)", 
         "rgb(0,255,0)", "rgb(0,255,255)", "rgb(0,191,255)", "rgb(0,0,255)", "rgb(139,0,255)",
@@ -45,10 +43,10 @@ def banner(console):
     ]
     colorful_text = gradient_text(brand_name, colors)
     console.print(colorful_text, end=None)
-    console.print("[bold green]♕ CarParkingTool[/bold green]: скрипт который поможет вам стать самым крутым.")
-    console.print(f"[bold green]♕ Telegram[/bold green]: [bold blue]@{__CHANNEL_USERNAME__}[/bold blue] or [bold blue]@{__GROUP_USERNAME__}[/bold blue].")
+    console.print("[bold green]: IF YOU WANT UNLIMITED ACCESS BUY ON "trese_xeno" IN TELEGRAM.)
+    console.print("[bold green] [/bold green]: SHARE ACCESS IS NOT ALLOWED IF YOU SHARE ACCES YOU GOT BLOCK.")
     console.print("[bold red]==================================================[/bold red]")
-    console.print("[bold yellow]! Note[/bold yellow]: Вам нужно выйти с игры перед использованием !.", end="\n\n")
+    console.print("[bold yellow]! Note[/bold yellow]: BEFORE USING THIS MAKE SURE THE ACCOUNT WAS ALREADY SIGNOUT IN GAME.", end="\n\n")
 
 def load_player_data(cpm):
     response = cpm.get_player_data()
@@ -175,7 +173,7 @@ if __name__ == "__main__":
                 console.print("[bold cyan][!] Insert how much money do you want.[/bold cyan]")
                 amount = IntPrompt.ask("[bold][?] Amount[/bold]")
                 console.print("[bold cyan][%] Saving your data[/bold cyan]: ", end=None)
-                if amount > 0 and amount <= 50000000:
+                if amount > 0 and amount <= 1000000000:
                     if cpm.set_player_money(amount):
                         console.print("[bold green]SUCCESSFUL.[/bold green]")
                         console.print("==================================")
@@ -196,7 +194,7 @@ if __name__ == "__main__":
                 console.print("[bold cyan][!] Insert how much coins do you want.[/bold cyan]")
                 amount = IntPrompt.ask("[bold][?] Amount[/bold]")
                 console.print("[bold cyan][%] Saving your data[/bold cyan]: ", end=None)
-                if amount > 0 and amount <= 200000:
+                if amount > 0 and amount <= 500000:
                     if cpm.set_player_coins(amount):
                         console.print("[bold green]SUCCESSFUL.[/bold green]")
                         console.print("==================================")
