@@ -15,7 +15,6 @@ __CHANNEL_USERNAME__ = "trese_xeno"
 __GROUP_USERNAME__   = "trese_xeno"
 
 
-
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
     sys.exit(0)
