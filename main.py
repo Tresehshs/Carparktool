@@ -46,10 +46,11 @@ def banner(console):
     ]
     colorful_text = gradient_text(brand_name, colors)
     console.print(colorful_text, end=None)
-    console.print("[bold green]: IF YOU WANT UNLIMITED ACCESS BUY ON trese_xeno IN TELEGRAM.")
-    console.print("[bold green] [/bold green]: SHARE ACCESS IS NOT ALLOWED IF YOU SHARE ACCES YOU GOT BLOCK.")
-    console.print("[bold red]==================================================[/bold red]")
-    console.print("[bold yellow]! Note[/bold yellow]: BEFORE USING THIS MAKE SURE THE ACCOUNT WAS ALREADY SIGNOUT IN GAME.", end="\n\n")
+    print(Colorate.Horizontal(Colors.rainbow, '=================================================================='))
+    print(Colorate.Horizontal(Colors.rainbow, '\t         𝐏𝐋𝐄𝐀𝐒𝐄 𝐋𝐎𝐆𝐎𝐔𝐓 𝐅𝐑𝐎𝐌 𝐂𝐏𝐌 𝐁𝐄𝐅𝐎𝐑𝐄 𝐔𝐒𝐈𝐍𝐆 𝐓𝐇𝐈𝐒 𝐓𝐎𝐎𝐋'))
+    print(Colorate.Horizontal(Colors.rainbow, '    𝐒𝐇𝐀𝐑𝐈𝐍𝐆 𝐓𝐇𝐄 𝐀𝐂𝐂𝐄𝐒𝐒 𝐊𝐄𝐘 𝐈𝐒 𝐍𝐎𝐓 𝐀𝐋𝐋𝐎𝐖𝐄𝐃 𝐀𝐍𝐃 𝐖𝐈𝐋𝐋 𝐁𝐄 𝐁𝐋𝐎𝐂𝐊𝐄𝐃'))
+    print(Colorate.Horizontal(Colors.rainbow, f' ‌           𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦: @{__CHANNEL_USERNAME__} 𝐎𝐫 @{__GROUP_USERNAME__>
+    print(Colorate.Horizontal(Colors.rainbow, '==================================================================')) end="\n\n'))
 
 def load_player_data(cpm):
     response = cpm.get_player_data()
