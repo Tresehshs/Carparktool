@@ -12,7 +12,7 @@ from rich.style import Style
 from carparktool import CarParkTool
 
 __CHANNEL_USERNAME__  = "trese_xeno"
-__GROUP_ USERNAME__   = "trese_xeno"
+__GROUP_USERNAME__    = "trese_xeno"
 
 
 def signal_handler(sig, frame):
