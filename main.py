@@ -48,16 +48,16 @@ def banner(console):
     console.print(colorful_text, end=None)
     console.print("[bold red] IF YOU WANT UNLIMITED ACCESS BUY ON trese_xeno IN TELEGRAM.")
     console.print("[bold red] SHARE ACCESS IS NOT ALLOWED IF YOU SHARE ACCES YOU GOT BLOCK.")
-    console.print("[bold red] TELEGRAM: trese_xeno or xenocpm.")
+    console.print("[bold red] TELEGRAM[/bold blue]: trese_xeno or xenocpm.")
     console.print("[bold blue]==================================================[/bold blue]")
-    console.print("[bold yellow] Note![/bold yellow]: BEFORE USING THIS MAKE SURE THE ACCOUNT WAS ALREADY SIGNOUT IN GAME.", end="\n\n")
+    console.print("[bold yellow] Note![/bold red]: BEFORE USING THIS MAKE SURE THE ACCOUNT WAS ALREADY SIGNOUT IN GAME.", end="\n\n")
 
 def load_player_data(cpm):
     response = cpm.get_player_data()
     if response.get('ok'):
         data = response.get('data')
         if 'floats' in data and 'localID' in data and 'money' in data and 'coin' in data:
-            console.print("[bold][red]================[/red][ PLAYER DETAILS ][red]================[/red][/bold]")
+            console.print("[bold][blue]================[/blue][ PLAYER DETAILS ][blue]================[/blue][/bold]")
             console.print(f"[bold green]Name   [/bold green]: { (data.get('Name') if 'Name' in data else 'UNDEFINED') }.")
             console.print(f"[bold green]LocalID[/bold green]: { (data.get('localID') if 'localID' in data else 'UNDEFINED') }.")
             console.print(f"[bold green]Money  [/bold green]: { (data.get('money') if 'money' in data else 'UNDEFINED') }.")
@@ -71,7 +71,7 @@ def load_player_data(cpm):
     
 def load_key_data(cpm):
     data = cpm.get_key_data()
-    console.print("[bold][red]==================================================[/red][/bold]")
+    console.print("[bold][blue]==================================================[/blue][/bold]")
     console.print(f"[bold green]Access Key [/bold green]: { data.get('access_key') }.")
     console.print(f"[bold green]Telegram ID[/bold green]: { data.get('telegram_id') }.")
     console.print(f"[bold green]Balance    [/bold green]: { (data.get('coins') if not data.get('is_unlimited') else 'Unlimited') }.")
@@ -79,10 +79,10 @@ def load_key_data(cpm):
 def load_client_details():
     response = requests.get("http://ip-api.com/json")
     data = response.json()
-    console.print("[bold][red]==================================================[/red][/bold]")
+    console.print("[bold][blue]==================================================[/blue][/bold]")
     console.print(f"[bold][green]Location[/bold][/green]: {data.get('city')}, {data.get('regionName')}, {data.get('countryCode')}")
     console.print(f"[bold][green]ISP[/bold][/green]     : {data.get('isp')}")
-    console.print("[bold][red]===================[/red][ SERVICES ][red]===================[/red][/bold]")
+    console.print("[bold][blue]===================[/blue][ SERVICES ][blue]===================[/blue][/bold]")
 
 def prompt_valid_value(content, tag, password=False):
     while True:
