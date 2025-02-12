@@ -48,9 +48,9 @@ def banner(console):
     console.print(colorful_text, end=None)
     console.print("[bold red] IF YOU WANT UNLIMITED ACCESS BUY ON trese_xeno IN TELEGRAM.")
     console.print("[bold red] SHARE ACCESS IS NOT ALLOWED IF YOU SHARE ACCES YOU GOT BLOCK.")
-    console.print("[bold red] TELEGRAM: [/bold green]trese_xeno or xenocpm.")
+    console.print("[bold red] TELEGRAM: trese_xeno or xenocpm.")
     console.print("[bold blue]==================================================[/bold blue]")
-    console.print("[bold yellow] Note![/bold red]: BEFORE USING THIS MAKE SURE THE ACCOUNT WAS ALREADY SIGNOUT IN GAME.", end="\n\n")
+    console.print("[bold yellow] Note![/bold yellow]: BEFORE USING THIS MAKE SURE THE ACCOUNT WAS ALREADY SIGNOUT IN GAME.", end="\n\n")
 
 def load_player_data(cpm):
     response = cpm.get_player_data()
