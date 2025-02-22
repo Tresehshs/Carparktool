@@ -498,11 +498,11 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
                     sleep(2)
                     continue
-            elif service == 20: # Change Races Wins
+            elif service == 20: # Change Race Wins
                 print(Colorate.Horizontal(Colors.rainbow, '[!] Insert how much races you win.'))
                 amount = IntPrompt.ask("[?] Amount")
                 console.print("[%] Changing your data: ", end=None)
-                if amount > 0 and amount <= 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999:
+                if amount > 0 and amount <= 10000:
                     if cpm.set_player_wins(amount):
                         print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                         print(Colorate.Horizontal(Colors.rainbow, '======================================'))
@@ -523,7 +523,7 @@ if __name__ == "__main__":
                 print(Colorate.Horizontal(Colors.rainbow, '[!] Insert how much races you lose.'))
                 amount = IntPrompt.ask("[?] Amount")
                 console.print("[%] Changing your data: ", end=None)
-                if amount > 0 and amount <= 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999:
+                if amount > 0 and amount <= 10000:
                     if cpm.set_player_loses(amount):
                         print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                         print(Colorate.Horizontal(Colors.rainbow, '======================================'))
