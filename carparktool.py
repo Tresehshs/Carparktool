@@ -1,11 +1,6 @@
 import requests
-# import json
 from time import sleep
 
-# Copyright (C) Anasov <me@anasov.ly> - All Rights Reserved
-# Unauthorized copying of this file, via any medium is strictly prohibited
-# Proprietary and confidential
-# Written by Anasov <me@anasov.ly>, 05, May, 2024.
 
 BASE_URL: str = "https://maroon-echidna-796942.hostingersite.com/api"
 
