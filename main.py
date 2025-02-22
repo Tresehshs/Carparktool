@@ -11,10 +11,10 @@ from rich.style import Style
 import pystyle
 from pystyle import Colors, Colorate
 
-from officialgoodshit import OfficialGoodShit
+from carparktool import CarParkTool
 
-__CHANNEL_USERNAME__ = "Suprememodzofficiall"
-__GROUP_USERNAME__   = "SuprememodzofficiallChat"
+__CHANNEL_USERNAME__ = "XENOCPM"
+__GROUP_USERNAME__   = "trese_xeno"
 
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
@@ -39,18 +39,12 @@ def gradient_text(text, colors):
 
 def banner(console):
     os.system('cls' if os.name == 'nt' else 'clear')
-    brand_name =  "                ╭━━━╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━━━━╮╱╱╱╱╭┳╮╱╱╭╮╭╮\n"
-    brand_name += "                ┃╭━╮┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃╭╮╭╮┃╱╱╱╱┃┃╰╮╭╯┣╯┃\n"
-    brand_name += "                ┃╰━━┳╮╭┳━━┳━┳━━┳╮╭┳━┻┫┃┃┣┻━┳━━┫┣╮┃┃╭┻╮┃\n"
-    brand_name += "                ╰━━╮┃┃┃┃╭╮┃╭┫┃━┫╰╯┃┃━┫┃┃┃╭╮┃╭╮┃┃┃╰╯┃╱┃┃\n"
-    brand_name += "                ┃╰━╯┃╰╯┃╰╯┃┃┃┃━┫┃┃┃┃━┫┃┃┃╰╯┃╰╯┃╰╋╮╭╯╭╯╰╮\n"
-    brand_name += "                ╰━━━┻━━┫╭━┻╯╰━━┻┻┻┻━━╯╰╯╰━━┻━━┻━╯╰╯╱╰━━╯\n"
-    brand_name += "                ╱╱╱╱╱╱╱┃┃\n"
-    brand_name += "                ╱╱╱╱╱╱╱╰╯\n"
+    brand_name = figlet_format('ZENXCPM', font='bloody')
     colors = [
         "rgb(255,0,0)", "rgb(255,69,0)", "rgb(255,140,0)", "rgb(255,215,0)", "rgb(173,255,47)", 
         "rgb(0,255,0)", "rgb(0,255,255)", "rgb(0,191,255)", "rgb(0,0,255)", "rgb(139,0,255)",
         "rgb(255,0,255)"
+
     ]
     colorful_text = gradient_text(brand_name, colors)
     console.print(colorful_text)
