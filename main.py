@@ -518,7 +518,7 @@ if __name__ == "__main__":
                 if status == 0:
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                    print(Colorate.Horizontal(Colors.rainbow, f'INFO: In order to tweak this account with CPMElsedev.'))
+                    print(Colorate.Horizontal(Colors.rainbow, f'INFO: In order to tweak this account with Trese_xeno.'))
                     print(Colorate.Horizontal(Colors.rainbow, 'you most sign-in to the game using this account.'))
                     sleep(2)
                     continue
