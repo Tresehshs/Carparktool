@@ -21,7 +21,7 @@ pkg install git
 
 pkg install python-pip
 
-git clone https://github.com/Tresehshs/Tresecarparkgit
+git clone https://github.com/Tresehshs/Tresecarpark.git
 
 cd Tresecarpark
 
@@ -37,7 +37,7 @@ pip install -r requirements.txt
 
 pip3 install pystyle
 
-python main.py
+python tresemain.py
 ```
 
 ## install python
