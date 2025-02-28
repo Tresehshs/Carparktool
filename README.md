@@ -1,6 +1,6 @@
-# Carparktool
+# TreseCarPark
 
-<h3>CarParkingToolr is a tool made to modify Car Parking Multiplayer accounts with no root or vertual app.</h3>
+<h3>TreseCarPark is a tool made to modify Car Parking Multiplayer accounts with no root or vertual app.</h3>
 <h4>you just need an Access Key message me in telegram "@TRESE_XENO"</h4>
 
 
@@ -21,9 +21,9 @@ pkg install git
 
 pkg install python-pip
 
-git clone https://github.com/Tresehshs/Carparktool.git
+git clone https://github.com/Tresehshs/Tresecarparkgit
 
-cd Carparktool
+cd Tresecarpark
 
 git pull
 
