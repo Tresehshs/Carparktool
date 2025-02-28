@@ -181,7 +181,7 @@ from rich.style import Style
 import pystyle
 from pystyle import Colors, Colorate
 
-from Tresecarpark import CarParkTool
+from tresecarpark import CarParkTool
 
 __CHANNEL_USERNAME__ = "XENOCPM"
 __GROUP_USERNAME__   = "trese_xeno"
